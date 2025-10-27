@@ -1,0 +1,53 @@
+/* Light theme - simple & clean */
+:root{
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#0b74ff;
+  --text:#0f1724;
+  --radius:10px;
+  --maxw:900px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:40px;
+}
+.container{max-width:var(--maxw);margin:24px auto;padding:0 16px}
+
+.site-header{background:var(--card);box-shadow:0 2px 8px rgba(15,23,36,0.04);border-bottom:1px solid rgba(15,23,36,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand h1{margin:0;font-size:20px}
+.brand .muted{color:var(--muted);font-size:13px;margin-top:4px}
+.nav a{margin-left:14px;color:var(--muted);text-decoration:none;font-weight:600}
+.nav a:hover{color:var(--accent)}
+
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,36,0.04);margin-bottom:18px}
+
+.hero{display:block;padding:28px}
+.hero h2{margin:0 0 6px;font-size:22px}
+.contact-line{margin-top:10px;font-size:14px;color:var(--muted)}
+.btn{display:inline-block;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
+
+h3{margin-top:0;color:var(--accent)}
+
+/* Form styles */
+form{display:flex;flex-direction:column;gap:10px}
+input[type="text"],input[type="email"],textarea{padding:10px;border:1px solid #e6e9ee;border-radius:8px;font-size:14px}
+textarea{min-height:90px;resize:vertical}
+.field-inline{border:0;padding:0;margin:0;display:flex;gap:12px;align-items:center}
+.field-inline legend{font-weight:600;margin-right:6px}
+.muted{color:var(--muted)}
+
+.site-footer{margin-top:20px;text-align:center;color:var(--muted);font-size:14px;padding:12px}
+
+/* Responsive */
+@media (max-width:600px){
+  .header-inner{flex-direction:column;gap:8px;align-items:flex-start}
+  .nav a{margin-left:0}
+}
